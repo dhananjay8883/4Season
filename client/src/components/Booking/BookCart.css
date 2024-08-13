@@ -1,0 +1,43 @@
+.book-page1 {
+  height: 550px;
+  width: 460px;
+  margin: 10px;
+  border-radius: 12px;
+  border: 1px solid gainsboro;
+  top: 50px;
+  left: 220px;
+  position: sticky;
+  top: 20px;
+}
+
+.done {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.book-img {
+  width: 10.625rem;
+  height: 6.25rem;
+  border-radius: 0.9375rem;
+}
+
+.middle-box {
+  height: 7.5rem;
+  width: 34.375rem;
+  border-radius: 12px;
+  border: 1px solid rgb(182, 174, 174);
+  margin-top: 1.25rem;
+}
+
+.top-box,
+.Middle-box,
+.last-box {
+  margin: 25px;
+}
+
+.horizontal-line {
+  width: 400px;
+  height: 1px;
+  background-color: gainsboro;
+}

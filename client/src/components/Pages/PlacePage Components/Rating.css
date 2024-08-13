@@ -1,0 +1,77 @@
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+}
+.review-text {
+  margin-right: 20px;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.recom {
+  font-weight: 400;
+}
+#G {
+  margin-left: 10px;
+}
+
+.guest {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.move {
+  margin-left: 10px;
+}
+
+.stars {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 650px;
+  height: 100px;
+  border: 1px solid gainsboro;
+  margin-left: 32px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+#rate {
+  font-size: x-large;
+  font-weight: 600;
+  line-height: 1;
+}
+
+#Reviews {
+  margin-right: 20px;
+}
+
+.vertical-line {
+  width: 0.1px; /* Adjust thickness */
+  height: 45px; /* Adjust height */
+  background-color: gainsboro; /* Adjust color */
+  margin: 10px; /* Optional, for spacing */
+}
+
+.stars:hover {
+  background-color: ghostwhite; /* background color on hover */
+}
+
+.owner-profile {
+  margin: 30px 0px 20px 30px; /* top, right, bottom, left */
+  display: flex;
+  gap: 25px;
+}
+
+#exp {
+  font-weight: 400;
+  font-size: 15px;
+  color: grey;
+}
+
+#name {
+  font-weight: 500;
+  font-size: 17px;
+}

@@ -1,0 +1,83 @@
+.head2cont {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 16px); /* Adjusted width to account for left and right margins */
+    margin-left: 8px;  /* Left margin */
+    margin-right: 8px; /* Right margin */
+    margin-top: 5px;   /* Top margin */
+    z-index: 200;
+}
+
+.header3search {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 80px;
+    height: 60px;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 
+        0 -4px 6px -1px rgba(0, 0, 0, 0),   /* Top shadow */
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),    /* Bottom shadow */
+        -4px 0 6px -1px rgba(0, 0, 0, 0.1),   /* Left shadow */
+        4px 0 6px -1px rgba(0, 0, 0, 0.1);    /* Right shadow */
+}
+
+.header3icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 9px;
+    margin-left: 11px;
+}
+
+.inputholder2 {
+    outline: none;
+    flex: 1;
+}
+
+.inputholder2::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+.patta {
+    width: 100%;
+    height: 31px;
+    background-color: white;
+    z-index: -1;
+    position: fixed;
+    top: 59px;
+}
+.patta1{
+    width: 100%;
+    height: 31px;
+    background-color:white;
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+}
+
+/* Media Queries for responsiveness */
+
+/* Small devices (up to 600px) */
+@media (max-width: 600px) {
+    .header3search {
+        height: 60px; /* Maintain same height on small screens */
+    }
+}
+
+/* Medium devices (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header3search {
+        height: 60px; /* Maintain same height on medium screens */
+    }
+}
+
+/* Large devices (1025px and up) */
+@media (min-width: 1025px) {
+    .header3search {
+        height: 60px; /* Maintain same height on large screens */
+    }
+}

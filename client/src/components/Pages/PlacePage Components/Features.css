@@ -1,0 +1,22 @@
+.col {
+  display: flex;
+  gap: 100px;
+  margin: 20px 40px;
+}
+
+.offer {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.c1 {
+  display: flex;
+  align-items: center;
+}
+
+.col1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  justify-content: start;
+}

@@ -1,0 +1,42 @@
+.last {
+  margin-top: 120px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.first-line {
+  font-size: 27px;
+  font-weight: 500;
+  margin: 35px 0px 35px 190px;
+}
+
+.row {
+  display: flex;
+  gap: 65px;
+  justify-content: center;
+}
+
+.vline {
+  width: 0.1px;
+  height: 100px;
+  background-color: gainsboro;
+  margin-left: 65px;
+}
+
+.row4,
+.row5,
+.row6,
+.row7,
+.row8,
+.row9 {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#pl1 {
+  gap: 20px;
+  display: grid;
+  font-weight: 600;
+}

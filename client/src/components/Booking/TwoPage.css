@@ -1,0 +1,387 @@
+.payment-div {
+    height: 53.125rem;
+    width: 37.5rem;
+    margin: 2.5rem;
+    margin-top: 3.125rem;
+    border: 1px solid gainsboro;
+    border-radius: 12px;
+  }
+  
+  .upper-box {
+    height: 3.75rem;
+    width: 34.375rem;
+    border-radius: 12px;
+    border: 1px solid rgb(182, 174, 174);
+    margin-top: 1.25rem;
+  }
+  
+  .upper-box2 {
+    height: 7.5rem;
+    width: 34.375rem;
+    border-radius: 12px;
+    border: 1px solid rgb(182, 174, 174);
+  }
+  
+  .middle-box {
+    height: 7.5rem;
+    width: 34.375rem;
+    border-radius: 12px;
+    border: 1px solid rgb(182, 174, 174);
+    margin-top: 1.25rem;
+  }
+  
+  .ic1 {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+  .ic2 {
+    width: 3.125rem;
+    height: 1.875rem;
+  }
+  
+  .pay-button {
+    height: 3.125rem;
+    width: 12.5rem;
+    background-image: linear-gradient(to right, rgb(96, 2, 96), rgb(64, 14, 99));
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  
+  .custom-content {
+    display: flex;
+    justify-content: center;
+    min-height: 70px;
+    gap: 30px;
+  }
+  
+  .custom-content .inputbox1 {
+    position: relative;
+    width: 12.5rem;
+  }
+  .custom-content .inputbox1 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(182, 174, 174);
+    border-radius: 12px;
+    outline: none;
+    font-size: 1em;
+    background-color: #ffffff;
+  }
+  
+  .custom-content1 {
+    display: flex;
+    justify-content: center;
+    min-height: 4.375rem;
+    gap: 1.875rem;
+  }
+  
+  .custom-content1 .inputbox1 {
+    position: relative;
+    width: 35.3125rem;
+  }
+  
+  .r {
+    color: rgb(182, 174, 174);
+  }
+  .custom-content1 .inputbox1 input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(182, 174, 174);
+    border-radius: 12px;
+    outline: none;
+    font-size: 1em;
+    background-color: #ffffff;
+  }
+  
+  .custom-content2 .inputbox2 input {
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(182, 174, 174);
+    border-radius: 12px;
+    outline: none;
+    font-size: 1em;
+    background-color: #ffffff;
+  }
+  
+  .book-img {
+    width: 10.625rem;
+    height: 6.25rem;
+    border-radius: 0.9375rem;
+  }
+  
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin: 25px;
+  }
+  
+  .book-page {
+    height: 28.75rem;
+    width: 28.75rem;
+    margin: 3.125rem;
+    border-radius: 0.75rem;
+    border: 1px solid gainsboro;
+    top: 3.125rem;
+    left: 13.75rem;
+    position: sticky;
+  }
+  
+  .Confirm_Pay {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  
+  .horizontal-line {
+    width: 400px;
+    height: 1px;
+    background-color: gainsboro;
+  }
+  
+  .horizontal-line1 {
+    width: 550px;
+    height: 1px;
+    background-color: gainsboro;
+  }
+  
+  .horizontal-line2 {
+    width: 550px;
+    height: 1px;
+    background-color: rgb(182, 174, 174);
+  }
+  @media (max-width: 1300px) {
+    .Confirm_Pay {
+      margin-left: 5rem;
+      margin-right: 6rem;
+    }
+    .book-page {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+    .payment-div {
+      margin-left: 1.875rem;
+      margin-right: 1.875rem;
+    }
+  
+    .horizontal-line1 {
+      width: 35.125rem;
+    }
+  }
+  
+  @media (max-width: 1250px) {
+    .Confirm_Pay {
+      margin-left: 4rem;
+      margin-right: 5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 35.25rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .Confirm_Pay {
+      margin-left: 3rem;
+      margin-right: 3.5rem;
+    }
+    .book-page {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    .payment-div {
+      margin-left: 0.875rem;
+      margin-right: 0.875rem;
+    }
+  
+    .horizontal-line1 {
+      width: 34.375rem;
+    }
+  }
+  
+  @media (max-width: 1150px) {
+    .Confirm_Pay {
+      margin-left: 2rem;
+      margin-right: 1.5rem;
+    }
+    .book-page {
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+    .payment-div {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+  
+    .horizontal-line1 {
+      width: 33.5rem;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .book-page {
+      height: 28.75rem;
+      width: 22.75rem;
+    }
+    .payment-div {
+      height: 53.125rem;
+      width: 35.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 30.625rem;
+    }
+  }
+  
+  @media (max-width: 1050px) {
+    .book-page {
+      height: 28.75rem;
+      width: 20.75rem;
+    }
+    .payment-div {
+      height: 53.125rem;
+      width: 32.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 28.75rem;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .payment-div {
+      height: 53.125rem;
+      width: 30.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 26.875rem;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .payment-div {
+      height: 53.125rem;
+      width: 28.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 24.75rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .payment-div {
+      height: 53.125rem;
+      width: 26.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 23rem;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .payment-div {
+      height: 55.5rem;
+      width: 24.5rem;
+    }
+  
+    .horizontal-line1 {
+      width: 21rem;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .Confirm_Pay {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .book-page {
+      height: 28.75rem;
+      width: 30.75rem;
+      top: auto;
+      left: auto;
+      position: static;
+      margin-left: 70px;
+      margin-right: 80px;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .payment-div {
+      height: 53.125rem;
+      width: 30.75rem;
+      margin-left: 70px;
+      margin-right: 80px;
+      margin-top: 20px;
+    }
+  
+    .horizontal-line1 {
+      width: 28rem;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .book-page {
+      height: 28.75rem;
+      width: 27.75rem;
+    }
+    .payment-div {
+      height: 53.125rem;
+      width: 27.75rem;
+    }
+  
+    .horizontal-line1 {
+      width: 26rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .book-page {
+      height: 28.75rem;
+      width: 24.75rem;
+    }
+    .payment-div {
+      height: 53.125rem;
+      width: 24.75rem;
+    }
+  
+    .horizontal-line1 {
+      width: 23rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .book-page {
+      height: 28.75rem;
+      width: 21.75rem;
+    }
+    .payment-div {
+      height: 54.125rem;
+      width: 21.75rem;
+    }
+  
+    .horizontal-line1 {
+      width: 20rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .book-page {
+      height: 29.25rem;
+      width: 19.75rem;
+    }
+    .payment-div {
+      height: 56.125rem;
+      width: 19.75rem;
+    }
+  
+    .horizontal-line1 {
+      width: 18rem;
+    }
+  }
+  
