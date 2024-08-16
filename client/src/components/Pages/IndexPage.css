@@ -378,4 +378,7 @@
     width: 100%;
     max-width: 100%;
   }
+  .container{
+    margin-left: 0px;
+  }
 }

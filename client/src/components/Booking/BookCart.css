@@ -17,8 +17,8 @@
 }
 
 .book-img {
-  width: 10.625rem;
-  height: 6.25rem;
+  width: 13.625rem;
+  height: 6.7rem;
   border-radius: 0.9375rem;
 }
 
@@ -40,4 +40,558 @@
   width: 400px;
   height: 1px;
   background-color: gainsboro;
+}
+
+
+/* Media queries starting from 1500px and going down in steps of 50px */
+@media (max-width: 1500px) {
+  .book-page1 {
+    width: 440px;
+    height: 515px;
+  }
+  .done{
+    gap: 0.1rem;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 22px;
+    margin-top: 22px;
+    margin-left: 23.5px;
+    margin-right: 23.5px;
+  }
+  .book-img{
+    width: 14rem;
+    height: 6.25rem;
+  }
+}
+
+
+
+@media (max-width: 1400px) {
+  .book-page1 {
+    width: 420px;
+    height: 480px;
+  }
+  .horizontal-line {
+    width: 390px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 18px;
+    margin-top: 15px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .book-img{
+    width: 14rem;
+  }
+  
+}
+
+@media (max-width: 1350px) {
+  .book-page1 {
+    width: 410px;
+    height: 465px;
+  }
+  .horizontal-line {
+    width: 370px;
+  }
+  .top-box,
+.Middle-box,
+.last-box {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.book-img{
+  width: 14rem;
+}
+}
+
+
+
+@media (max-width: 1300px) {
+  .book-page1 {
+    width: 390px;
+    height: 440px;
+  }
+  .horizontal-line {
+    width: 360px;
+  }
+  .top-box,
+.Middle-box,
+.last-box {
+  margin-bottom: 12px;
+  margin-top: 14px;
+}
+.book-img{
+  width: 14rem;
+}
+.normalname{
+  font-size: 14.5px;
+}
+.bigname{
+  font-size:22px;
+}
+.smallname{
+  font-size:17px;
+}
+}
+
+@media (max-width: 1240px) {
+  .book-page1 {
+    width: 370px;
+    height: 415px;
+  }
+  .horizontal-line {
+    width: 340px;
+  }
+  .done{
+    gap: 0;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .normalname{
+    font-size: 14px;
+  }
+  .bigname{
+    font-size:19px;
+  }
+  .smallname{
+    font-size:16px;
+  }
+  .book-img{
+    width: 14rem;
+    height: 6rem;
+  }
+}
+
+@media (max-width: 1180px) {
+  .book-img{
+    width: 13rem;
+    height: 5.8rem;
+  }
+  .book-page1 {
+    width: 340px;
+    height: 380px;
+  }
+  .horizontal-line {
+    width: 320px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .bigname{
+    font-size:larger;
+  }
+  .smallname{
+    font-size:medium;
+  }
+  .normalname{
+    font-size: small;
+  }
+}
+
+
+
+@media (max-width: 1100px) {
+  .book-img{
+    width: 12rem;
+    height: 5.5rem;
+  }
+  .book-page1 {
+    width: 320px;
+    height: 370px;
+  }
+  .horizontal-line {
+    width: 320px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .bigname{
+    font-size:larger;
+  }
+  .smallname{
+    font-size:medium;
+  }
+  .normalname{
+    font-size: small;
+  }
+}
+@media (max-width: 1030px) {
+  .book-img{
+    width: 13rem;
+    height: 7rem;
+  }
+  .done {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .book-page1 {
+    width: 440px;
+    height: 495px;
+  }
+  .horizontal-line {
+    width: 400px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .normalname{
+    font-size: 15px;
+  }
+  .bigname{
+    font-size:22px;
+  }
+  .smallname{
+    font-size:17px;
+  }
+}
+
+@media (max-width: 950px) {
+  .book-img{
+    width: 12rem;
+    height: 6.5rem;
+  }
+ .book-page1 {
+    width: 420px;
+    height: 460px;
+  }
+  .horizontal-line {
+    width: 380px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .normalname{
+    font-size: 14px;
+  }
+  .bigname{
+    font-size:21.5px;
+  }
+  .smallname{
+    font-size:16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .book-img{
+    width: 11rem;
+    height: 6rem;
+  }
+ .book-page1 {
+    width: 390px;
+    height: 435px;
+  }
+  .horizontal-line {
+    width: 350px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 13px;
+    margin-top: 13px;
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+  .normalname{
+    font-size: 13.5px;
+  }
+  .bigname{
+    font-size:21px;
+  }
+  .smallname{
+    font-size:15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .book-img{
+    width: 10.5rem;
+    height: 5.8rem;
+  }
+ .book-page1 {
+    width: 370px;
+    height: 405px;
+  }
+  .horizontal-line {
+    width: 330px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 11px;
+    margin-top: 11px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .normalname{
+    font-size: 12.5px;
+  }
+  .bigname{
+    font-size:19.5px;
+  }
+  .smallname{
+    font-size:14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .book-img{
+    width: 10rem;
+    height: 5.5rem;
+  }
+ .book-page1 {
+    width: 355px;
+    height: 385px;
+  }
+  .horizontal-line {
+    width: 300px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 9px;
+    margin-top: 9px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .normalname{
+    font-size: 12px;
+  }
+  .bigname{
+    font-size:17.5px;
+  }
+  .smallname{
+    font-size:13.5px;
+  }
+}
+
+
+
+@media (max-width: 750px) {
+  .book-img{
+    width: 9.5rem;
+    height: 5rem;
+  }
+ .book-page1 {
+    width: 330px;
+    height: 370px;
+  }
+  .horizontal-line {
+    width: 300px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+  .normalname{
+    font-size: 11px;
+  }
+  .bigname{
+    font-size:18px;
+  }
+  .smallname{
+    font-size:13px;
+  }
+}
+
+@media (max-width: 670px) {
+  .book-img{
+    width: 9rem;
+    height: 4.5rem;
+  }
+ .book-page1 {
+    width: 285px;
+    height: 335px;
+  }
+  .horizontal-line {
+    width: 250px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .normalname{
+    font-size: 10px;
+  }
+  .bigname{
+    font-size:15px;
+  }
+  .smallname{
+    font-size:12px;
+  }
+}
+
+@media (max-width: 620px) {
+  .each-book{
+    margin: 0px;
+    width: 350px;
+  }
+  .book-img{
+    width: 13rem;
+    height: 7rem;
+  }
+  .done {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .book-page1 {
+    width: 460px;
+    height: 480px;
+  }
+  .horizontal-line {
+    width: 440px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .normalname{
+    font-size: 15px;
+  }
+  .bigname{
+    font-size:22px;
+  }
+  .smallname{
+    font-size:17px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .book-img{
+    width: 13rem;
+    height: 7rem;
+  }
+
+  .book-page1 {
+    width: 410px;
+    height: 455px;
+  }
+  .horizontal-line {
+    width: 400px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 13px;
+    margin-top: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .normalname{
+    font-size: 15px;
+  }
+  .bigname{
+    font-size:20px;
+  }
+  .smallname{
+    font-size:17px;
+  }
+}
+
+@media (max-width: 410px) {
+
+  .book-img{
+    width: 15rem;
+    height: 6.5rem;
+  }
+
+  .book-page1 {
+    width: 365px;
+    height: 420px;
+  }
+  .horizontal-line {
+    width: 320px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+  .normalname{
+    font-size: 14px;
+  }
+  .bigname{
+    font-size:18px;
+  }
+  .smallname{
+    font-size:16px;
+  }
+}
+
+@media (max-width: 370px) {
+
+  .book-img{
+    width: 15rem;
+    height: 6.5rem;
+  }
+
+  .book-page1 {
+    width: 330px;
+    height: 400px;
+  }
+  .horizontal-line {
+    width: 320px;
+  }
+  .top-box,
+  .Middle-box,
+  .last-box {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .normalname{
+    font-size: 13px;
+  }
+  .bigname{
+    font-size:17px;
+  }
+  .smallname{
+    font-size:15px;
+  }
 }

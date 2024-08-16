@@ -14,6 +14,7 @@ import BookingsPage from "./components/Booking/BookingsPage.jsx";
 import BookingPage from "./components/Booking/BookingPage.jsx";
 import ShowMore from "./components/Pages/PlacePage Components/ShowMore.jsx";
 import BookCart from "./components/Booking/BookCart.jsx";
+import Error from "./components/Error.jsx";
 
 axios.defaults.withCredentials = true;
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="account/bookings" element={<BookCart />} />
             <Route path="account/bookings/:id" element={<BookingPage />} />
             <Route path="place/:id/showmore" element={<ShowMore />} />
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </WishlistProvider>

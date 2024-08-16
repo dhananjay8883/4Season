@@ -29,7 +29,7 @@ function BookCart() {
           });
 
           return (
-            <div key={booking._id}>
+            <div className = 'each-book' key={booking._id}>
               {booking.place.photos.length > 0 && (
                 <div className="book-page1">
                   <div className="top-box flex">
@@ -44,7 +44,7 @@ function BookCart() {
                       />
                     </div>
                     <div className="flex items-center">
-                      <div>
+                      <div className="normalname">
                         <p>here place is required</p>
                         <p className="text-gray-500">here side is required</p>
                         <p>
@@ -63,18 +63,18 @@ function BookCart() {
 
                   <div className="top-box">
                     <div className="mb-2">
-                      <p className="text-2xl font-semibold">Your trip</p>
+                      <p className="bigname text-2xl font-semibold">Your trip</p>
                     </div>
 
                     <div className="mb-2">
                       <div className="flex justify-between">
                         <div>
-                          <p className="text-lg font-medium">Dates</p>
-                          <p>
+                          <p className="smallname text-lg font-medium">Dates</p>
+                          <p className="normalname">
                             {startDay} {startMonth} – {endDay} {endMonth}
                           </p>
                         </div>
-                        <div className="underline font-medium cursor-pointer">
+                        <div className="smallname underline font-medium cursor-pointer">
                           Edit
                         </div>
                       </div>
@@ -83,8 +83,8 @@ function BookCart() {
                     <div className="mb-2">
                       <div className="flex justify-between">
                         <div>
-                          <p className="text-lg font-medium">Guests</p>
-                          <p>1 guest</p>
+                          <p className="smallname text-lg font-medium">Guests</p>
+                          <p className="normalname">1 guest</p>
                         </div>
                         <div className="underline font-medium cursor-pointer">
                           Edit
@@ -98,10 +98,10 @@ function BookCart() {
                   </div>
 
                   <div className="Middle-box">
-                    <p className="text-2xl font-semibold">Price details</p>
+                    <p className="bigname text-2xl font-semibold">Price details</p>
                     <div className="flex justify-between mt-2">
-                      <p>$81,611.24 x 5 nights</p>
-                      <p>here price is required</p>
+                      <p className="normalname">$81,611.24 x 5 nights</p>
+                      <p className="normalname">here price is required</p>
                     </div>
                   </div>
                   <div className="flex justify-center">
@@ -109,8 +109,8 @@ function BookCart() {
                   </div>
                   <div className="Middle-box">
                     <div className="flex justify-between">
-                      <p className="text-base font-medium">Total (INR)</p>
-                      <p>here price is required</p>
+                      <p className="bigname moresmall text-base font-medium">Total (INR)</p>
+                      <p className="normalname">here price is required</p>
                     </div>
                   </div>
                 </div>

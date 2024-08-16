@@ -50,10 +50,10 @@ function IndexPage() {
         <CartProvider>
           <div className="each-card">
             {places.length > 0 &&
-              places.map((place) => (
+              places.map((place ,index) => (
                 <div className="container" key={place._id}>
                   <div className="heart">
-                    <Button place={place} />
+                    <Button place={place} photos={"http://localhost:4000/upload/" + place.photos?.[index]} />
                   </div>
                   <Link to={"/place/" + place._id} key={place._id}>
                     {place.photos?.[0] && (
@@ -65,6 +65,7 @@ function IndexPage() {
                           }
                           alt=""
                         />
+                        
                       </div>
                     )}
                   </Link>
