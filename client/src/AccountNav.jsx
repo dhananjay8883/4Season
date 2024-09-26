@@ -11,9 +11,10 @@ export default function AccountNav() {
   }
 
   function linkClasses(type = null) {
-    let classes = "flex items-center justify-center gap-2 py-2 px-4 rounded-full flex-grow";
+    let classes =
+      "flex items-center justify-center gap-2 py-2 px-4 rounded-full flex-grow";
     if (type === subpage) {
-      classes += " bg-primary text-white ";
+      classes += " bg-primary text-white";
     } else {
       classes += " bg-gray-200 ";
     }
@@ -25,7 +26,10 @@ export default function AccountNav() {
       <Header2 />
       <nav className="w-full flex flex-col md:flex-row justify-center items-center mt-8 mb-8 px-4 md:px-8">
         <div className="flex flex-col md:flex-row md:gap-4 w-full max-w-4xl">
-          <Link className={`${linkClasses("profile")} mb-4 md:mb-0`} to={"/account"}>
+          <Link
+            className={`${linkClasses("profile")} mb-4 md:mb-0`}
+            to={"/account"}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -40,7 +44,10 @@ export default function AccountNav() {
             </svg>
             My Profile
           </Link>
-          <Link className={`${linkClasses("bookings")} mb-4 md:mb-0`} to={"/account/bookings"}>
+          <Link
+            className={`${linkClasses("bookings")} mb-4 md:mb-0`}
+            to={"/account/bookings"}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -60,7 +67,10 @@ export default function AccountNav() {
             </svg>
             My Booking
           </Link>
-          <Link className={`${linkClasses("places")} mb-4 md:mb-0`} to={"/account/places"}>
+          <Link
+            className={`${linkClasses("places")} mb-4 md:mb-0`}
+            to={"/account/places"}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -76,7 +86,10 @@ export default function AccountNav() {
             </svg>
             My Accommodation
           </Link>
-          <Link className={`${linkClasses("wishlist")} mb-4 md:mb-0`} to={"/account/wishlist"}>
+          <Link
+            className={`${linkClasses("wishlist")} mb-4 md:mb-0`}
+            to={"/account/wishlist"}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

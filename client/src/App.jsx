@@ -15,6 +15,7 @@ import BookingPage from "./components/Booking/BookingPage.jsx";
 import ShowMore from "./components/Pages/PlacePage Components/ShowMore.jsx";
 import BookCart from "./components/Booking/BookCart.jsx";
 import Error from "./components/Error.jsx";
+import SearchResult from "./components/SearchBar/SearchResult.jsx";
 
 axios.defaults.withCredentials = true;
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<IndexPage />} />
             <Route path="/:category" element={<IndexPage />} />
+            <Route path="/search" element={<SearchResult />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<LoginPage />} />
             <Route path="account/:subpage?" element={<ProfilePage />} />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useWishlist } from "../WishlistContext";
 import axios from "axios";
 import "./Wishlist.css";

@@ -1,0 +1,21 @@
+.search-bar {
+  width: 800px;
+  height: 63px;
+  border: 1px solid #d1d5db;
+  z-index: 1; /* Adjust as necessary */
+  position: absolute; /* Keeps it from pushing other elements */
+  top: 0px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+button {
+  z-index: 1;
+}
+
+.search-bar:focus {
+  outline: none;
+}

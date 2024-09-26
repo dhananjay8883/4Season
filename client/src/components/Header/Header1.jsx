@@ -11,6 +11,7 @@ import Add_guest from "../ADD/Add_guest";
 import Any_where from "../ADD/Any_where";
 import PopupContent from "./PopupContent";
 import Nav from "../Nav";
+import SearchBar from "../SearchBar/SearchBar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,6 +60,11 @@ function Header() {
   }, []);
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
+
+  const handleAnywhereClick = () => {
+    setIsSearchBarVisible(!isSearchBarVisible); // Toggle visibility
+  };
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -164,29 +170,12 @@ function Header() {
         <div className="wow">
           <div className="now flex gap-2 border border-gray-300 rounded-full shadow-md shadow-gray-250">
             <div className="any1">
-              <Popup
-                trigger={<button className="mt-2 ml-16">Anywhere</button>}
-                position="bottom center"
-                className="custom-popup"
-                contentStyle={{
-                  width: "223px",
-                  height: "94px",
-                  padding: "20px",
-                  border: "1px solid #ddd",
-                  borderRadius: "10px",
-                  position: "absolute",
-                  zIndex: "999",
-                  pointerEvents: "auto",
-                  top: "140.41px",
-                  left: "40.98px",
-                }}
-                arrowStyle={{ display: "none" }} /* Hide arrow, though this might not work */
-              >
-                <div>
-                  <Any_where />
-                </div>
-              </Popup>
+              <button className="mt-2 ml-16" onClick={handleAnywhereClick}>
+                Anywhere
+              </button>
             </div>
+
+            {isSearchBarVisible && <SearchBar />}
             <div className="border-l border-gray-300"></div>
             <div className="any2">
               <Popup
@@ -234,7 +223,10 @@ function Header() {
                 </div>
               </Popup>
             </div>
-            <button className="bg-purple-500 text-white w-12 h-12 flex items-center justify-center rounded-full mt-0.3">
+            <button
+              className="bg-purple-500 text-white w-12 h-12 flex items-center justify-center rounded-full mt-0.3"
+              onClick={handleAnywhereClick}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
