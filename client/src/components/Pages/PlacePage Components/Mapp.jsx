@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "./Mapp.css"; // Import the CSS file
 import pinIcon from "./pin-location-4355.svg";
+
 const Mapp = ({ place }) => {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
@@ -26,10 +28,12 @@ const Mapp = ({ place }) => {
           phone: 123,
         },
       };
+
       const customIcon = L.icon({
         iconUrl: pinIcon,
         iconSize: [60, 60],
       });
+
       for (let key in data) {
         const location = data[key];
         const marker = L.marker(location.coords, {
@@ -50,45 +54,20 @@ const Mapp = ({ place }) => {
         marker.addTo(mapRef.current);
       }
     }
+
     return () => {
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
       }
     };
-  }, []);
-  // Inline styles for centering the map container
-  const outerContainerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    backgroundColor: "white",
-    marginTop: "170px",
-    // Optional background color
-  };
-  const mapStyle = {
-    width: "1000px",
-    height: "500px",
-    // margin:'10px',
-  };
+  }, [place.X, place.Y]);
+
   return (
-    <div style={outerContainerStyle}>
-      <div
-        ref={mapContainerRef}
-        style={mapStyle}
-        id="map"
-        className="rounded-xl"
-      />
+    <div className="outer-container">
+      <div ref={mapContainerRef} className="map-container rounded-xl" id="map" />
     </div>
   );
 };
+
 export default Mapp;
-
-// import React from "react";
-
-// function Mapp() {
-//   return <div></div>;
-// }
-
-// export default Mapp;

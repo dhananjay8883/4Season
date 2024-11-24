@@ -22,7 +22,7 @@ export default function BookingsPage() {
                 <img
                   className="object-cover rounded-2xl"
                   src={
-                    "http://localhost:4000/upload/" + booking.place.photos[0]
+                    "http://localhost:4000/upload/" + booking.place.photos?.[0]
                   }
                   alt=""
                 />

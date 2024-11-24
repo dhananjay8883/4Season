@@ -1,13 +1,12 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import Rating from "./Rating";
+import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../../../UserContext";
-import "./Information.css";
 import { differenceInCalendarDays, format } from "date-fns";
 import axios from "axios";
-import { Navigate, Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import "./BookingDiv.css";
 
-export default function Information({ place }) {
-  const { startDate, setStartDate, endDate, setEndDate, guests, setGuests } =
+export default function BookingDiv({place}){
+    const { startDate, setStartDate, endDate, setEndDate, guests, setGuests } =
     useContext(UserContext);
   let numberOfNights = 0;
   const [name, setName] = useState("");
@@ -16,10 +15,6 @@ export default function Information({ place }) {
   const { user } = useContext(UserContext);
   const windowWidth = useRef(window.innerWidth);
   const [isSmallScreen, setIsSmallScreen] = useState(windowWidth.current <= 768);
-
-  const handleReload = () => {
-    window.location.reload();
-  };
 
   useEffect(() => {
     if (user) {
@@ -52,34 +47,18 @@ export default function Information({ place }) {
       name,
       mobile,
       price: numberOfNights * place.price,
-      // photo: place.photos[0],
     });
     const bookingId = response.data._id;
     setRedirect(`/account/bookings/${bookingId}`);
-
-    // Reset all fields after booking
-    setStartDate(null);
-    setEndDate(null);
-    setGuests(1);
-    setName(user ? user.name : "");
-    setMobile("");
   }
 
   if (redirect) {
     return <Navigate to={redirect}></Navigate>;
   }
-
-  return (
-    <div className="center">
-      <div className="information">
-        <div className="info">
-          <p className="type address">{place.address}</p>
-          <p className="space">Max Guest {place.maxGuests}</p>
-          <Rating place={place} />
-        </div>
-{!isSmallScreen && 
-    <div className="chart">
-          <p id="price" className="text-2xl text-center mb-2">
+    return(
+        <>
+        <div className="chart">
+          <p id="price" className="text-2xl text-center ">
             Price: ${place.price} / per night
           </p>
           <div className="border rounded-2xl">
@@ -129,16 +108,15 @@ export default function Information({ place }) {
               />
             </div>
           </div>
-
-          <button className="bookbutton" onClick={handleBooking}>
+          <button
+            className="bookbutton"
+            onClick={handleBooking}
+          >
             Book now
           </button>
-
           {numberOfNights > 0 && <span>${numberOfNights * place.price}</span>}
         </div>
 
-}
-      </div>
-    </div>
-  );
+        </>
+    )
 }

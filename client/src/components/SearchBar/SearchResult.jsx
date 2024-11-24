@@ -44,9 +44,7 @@ function SearchResult() {
             <p>Reviews: {place.reviews}</p>
             <p>Price: {place.price}</p>
             <img
-              src={place.photos[0]}
-              alt={place.title}
-              className="w-full h-auto"
+              src={"http://localhost:4000/upload/" + place.photos?.[0]}
             />
             <p>{place.photos[0]}</p>
             {console.log(place.photos)}

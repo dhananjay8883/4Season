@@ -1,3 +1,9 @@
+.secondpage-main{
+  /* overflow-x: hidden;
+  scrollbar-width: none; */
+  /* overflow-y:scroll; */
+}
+
 .title{
     font-size: xx-large;
 }
@@ -50,19 +56,6 @@
     position: sticky;
 } */
 
-.chart {
-    height: fit-content;
-    width: fit-content;
-    padding: 20px;
-    margin-top: 50px;
-    margin-left: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid gainsboro;
-    position: sticky;
-    top: 50px; /* Adjust based on the desired sticky position */
-    right: 110px; /* Adjust based on the sidebar's width + some margin */
-}
 
 
 .center {
@@ -405,7 +398,7 @@
   }
   
   
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     .Container {
       background-color: ghostwhite;
       grid-template-columns: 1fr;
@@ -446,9 +439,16 @@
       height: 120px;
       border-bottom-left-radius: 12px;
     }
+    
+    .info{
+      /* display: flex;
+      justify-content: center; */
+    }
+    
   }
 
   .parent-container{
-    /* overflow-x:hidden; */
+    overflow-x:initial;
+
   }
   

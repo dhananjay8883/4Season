@@ -13,6 +13,14 @@
   gap: 2px;
 }
 
+.house {
+  grid-area: 1 / 1 / 3 / 2;
+  height: 447px;
+  width: 576px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
 .house,
 .interior,
 .kitchen,
@@ -30,14 +38,6 @@
   transform: scale(1.01);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   filter: brightness(0.8);
-}
-
-.house {
-  grid-area: 1 / 1 / 3 / 2;
-  height: 447px;
-  width: 576px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
 }
 
 .interior {
@@ -115,8 +115,7 @@
   }
 }
 
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .Container {
     background-color: ghostwhite;
     grid-template-columns: 1fr;
@@ -156,5 +155,20 @@
     width: 100%;
     height: 120px;
     border-bottom-left-radius: 12px;
+
+  .slider-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .Container{
+      display: inline-block;
+    }
   }
 }
+
+
+
+
+
+

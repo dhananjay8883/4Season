@@ -9,14 +9,14 @@ function Chart({ placeId }) {
   useEffect(() => {
     if (placeId) {
       axios
-        .get(`http://localhost:4000/places/${placeId}`)
+        .get("http://localhost:4000/places/${placeId}")
         .then((response) => {
           setPrice(response.data.price);
           setDate(new Date(response.data.date));
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
-        });
+        })
     }
   }, [placeId]);
 
@@ -35,4 +35,4 @@ function Chart({ placeId }) {
   );
 }
 
-export default Chart;
+export default Chart;

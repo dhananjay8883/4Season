@@ -10,15 +10,18 @@
 }
 
 .chart {
+  position: sticky;
   height: 515px;
   width: 382px;
-  margin: 50px 20px 0px 0px;
+  padding: 1rem;
+  margin: 1rem 0px 0px 0px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid gainsboro;
-  position: sticky;
-  top: 50px; /* Adjust based on the desired sticky position */
-  left: 220px; /* Adjust based on the sidebar's width + some margin */
+  background-color: white;
+  /* top: 50px; 
+  left: 20px;  */
+  right: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,3 +55,11 @@
   font-size: 15px;
   margin: 20px auto 0 auto; /* Centering the button */
 }
+
+@media (max-width:768px){
+  .address{
+    font-size: large;
+    font-weight: 500;
+  }
+}
+

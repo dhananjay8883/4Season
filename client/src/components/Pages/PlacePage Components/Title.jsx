@@ -7,21 +7,21 @@ function Title({ place }) {
     <div>
       <div className="front">
         <h1 className="title">{place.title}</h1>
-        <div className="right-side">
+        <div className="title-panel right-side flex items-center">
           <Link to="/">
-            <button>
-              <i class="bi bi-house"></i>
-              <span> Back to Home</span>
+            <button className="">
+              <i className="bi bi-house"></i>
+              <span className="hidden md:block"> Back to Home</span>
             </button>
           </Link>
           <Link to="/wishlist">
-            <button className="flex items-center">
-              <i className="bi bi-heart mr-1"></i>
-              <span>Wishlist</span>
+            <button className="">
+              <i className="bi bi-heart"></i>
+              <span className="hidden md:block">Wishlist</span>
             </button>
           </Link>
-          <button className="icon">
-            <i class="bi bi-upload"></i> <span>Share</span>
+          <button className="">
+            <i className="bi bi-upload"></i> <span className="hidden md:block">Share</span>
           </button>
         </div>
       </div>

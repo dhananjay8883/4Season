@@ -37,8 +37,7 @@ function BookCart() {
                       <img
                         className="book-img"
                         src={
-                          "http://localhost:4000/upload/" +
-                          booking.place.photos[0]
+                          "http://localhost:4000/upload/" + booking.place.photos[0]
                         }
                         alt=""
                       />
