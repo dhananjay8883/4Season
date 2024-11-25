@@ -1,37 +1,37 @@
-
-/* Mapp.css */
 .outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    background-color: white;
-    margin-top: 7rem;
-  }
-  
-  .map-container {
-    width: 1000px;
-    height: 500px;
-    z-index: 49;
-  }
-  
-  .rounded-xl {
-    border-radius: 0.75rem;
-  }
-  
-  @media (max-width: 768px) {
-    .outer-container {
-      margin-top: 0rem;
-      height: auto;
-      padding: 1rem;
-      background-color: white;
-    }
-  
-    .map-container {
-      width: 100%;
-      height: 60vw; /* Maintain aspect ratio */
-      z-index: 0;
-    }
-  }
-  
+  position: relative;
+  height: 100%; /* Ensure the parent container occupies full viewport height */
+  background-color: white;
+  margin-bottom: 7rem;
+}
 
+.map-container {
+  position: relative; /* Set it to relative for responsive positioning */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal alignment */
+  width: 90%; /* Use percentage to make it responsive */
+  height: 40vh; /* Use viewport height for responsiveness */
+  z-index: 49;
+  background-color: white; /* Ensure visibility */
+  border-radius: 0.75rem;
+}
+
+/* For large screens */
+@media (min-width: 1200px) {
+  .map-container {
+    width: 1000px; /* Fixed width for large screens */
+    height: 500px; /* Fixed height for large screens */
+  }
+}
+
+/* For medium screens */
+@media (max-width: 768px) {
+  .map-container {
+    width: 100%; /* Full width on smaller screens */
+    height: 50vh; /* Make map take 50% of the viewport height */
+  }
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}

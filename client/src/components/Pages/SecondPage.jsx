@@ -14,7 +14,6 @@ import Header4 from "../Header/Header4.jsx";
 import LeftSide from "../Booking/LeftSide.jsx";
 import Chart from "./PlacePage Components/Chart.jsx";
 
-
 export default function SecondPage() {
   const { id } = useParams();
   const [place, setPlace] = useState(null);
@@ -22,15 +21,15 @@ export default function SecondPage() {
   const [transfer, setTransfer] = useState(false);
   const [display, setDisplay] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isSmallScreen, setIsSmallScreen] = useState(windowWidth.current <= 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    windowWidth.current <= 768
+  );
   const [bookingDetails, setBookingDetails] = useState({
     price: 0,
     startDate: null,
-    endDate: null,
-  });
+    endDate: null,
+  });
   const [always, setAlways] = useState(false);
-
-  
 
   useEffect(() => {
     if (id) {
@@ -48,41 +47,45 @@ export default function SecondPage() {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    };
+  }, []);
 
   if (!place) return "";
   return (
     <>
-    <div className="secondpage-main">
-    {/* <Header3 /> */}
-      <div className="mt-5">
-        <div className="parent-container">
-          <Title place={place} />
-          <Images
+      <div className="secondpage-main">
+        {/* <Header3 /> */}
+        <div className="mt-5">
+          <div className="parent-container">
+            <Title place={place} />
+            <Images
+              place={place}
+              showAllPhotos={showAllPhotos}
+              setAllPhotos={setAllPhotos}
+            />
+            <Information place={place} />
+            {!isSmallScreen && (
+              <>
+                <Mapp place={place} />
+                <Reviews place={place} />
+              </>
+            )}
+          </div>
+        </div>
+        {display && (
+          <Imagesmore
             place={place}
             showAllPhotos={showAllPhotos}
             setAllPhotos={setAllPhotos}
           />
-          <Information place={place}/>
-          {!isSmallScreen && <>
-          <Mapp place={place} />
-          <Reviews place={place} />
-          </>}
-          
-        </div>
+        )}
+        {windowWidth >= 1090 ? (
+          <MainPageFooter />
+        ) : (
+          <Chart price={bookingDetails.price} date={bookingDetails.startDate} />
+        )}
+        {always && <LeftSide place={place} />}
       </div>
-      {display && (
-        <Imagesmore
-          place={place}
-          showAllPhotos={showAllPhotos}
-          setAllPhotos={setAllPhotos}
-        />
-      )}
-      {windowWidth >=1090? <MainPageFooter/> :<Chart price={bookingDetails.price} date={bookingDetails.startDate} />  }
-      {always && <LeftSide place={place} />}
-    </div>
-      
     </>
   );
 }

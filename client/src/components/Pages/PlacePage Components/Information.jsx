@@ -15,7 +15,9 @@ export default function Information({ place }) {
   const [redirect, setRedirect] = useState("");
   const { user } = useContext(UserContext);
   const windowWidth = useRef(window.innerWidth);
-  const [isSmallScreen, setIsSmallScreen] = useState(windowWidth.current <= 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    windowWidth.current <= 768
+  );
 
   const handleReload = () => {
     window.location.reload();
@@ -77,67 +79,66 @@ export default function Information({ place }) {
           <p className="space">Max Guest {place.maxGuests}</p>
           <Rating place={place} />
         </div>
-{!isSmallScreen && 
-    <div className="chart">
-          <p id="price" className="text-2xl text-center mb-2">
-            Price: ${place.price} / per night
-          </p>
-          <div className="border rounded-2xl">
-            <div className="md:flex">
-              <div className="px-4 py-4">
-                <label>Check In: </label>
+        {!isSmallScreen && (
+          <div className="chart sticky-chart">
+            <p id="price" className="text-2xl text-center mb-2">
+              Price: ${place.price} / per night
+            </p>
+            <div className="border rounded-2xl">
+              <div className="md:flex">
+                <div className="px-4 py-4">
+                  <label>Check In: </label>
+                  <input
+                    type="date"
+                    value={formatDateToInputValue(startDate)}
+                    onChange={handleStartDateChange}
+                  />
+                </div>
+                <div className="px-4 py-4 border-l">
+                  <label>Check Out: </label>
+                  <input
+                    type="date"
+                    value={formatDateToInputValue(endDate)}
+                    onChange={handleEndDateChange}
+                  />
+                </div>
+              </div>
+              <div className="px-4 py-4 border-t">
+                <label>Number of guests: </label>
                 <input
-                  type="date"
-                  value={formatDateToInputValue(startDate)}
-                  onChange={handleStartDateChange}
+                  className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
+                  type="number"
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
                 />
               </div>
-              <div className="px-4 py-4 border-l">
-                <label>Check Out: </label>
+              <div className="px-4 py-4 border-t">
+                <label>Name:</label>
                 <input
-                  type="date"
-                  value={formatDateToInputValue(endDate)}
-                  onChange={handleEndDateChange}
+                  className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="px-4 py-4 border-t">
+                <label>Mobile:</label>
+                <input
+                  className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
+                  type="tel"
+                  value={mobile}
+                  onChange={(e) => setMobile(e.target.value)}
                 />
               </div>
             </div>
-            <div className="px-4 py-4 border-t">
-              <label>Number of guests: </label>
-              <input
-                className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
-                type="number"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-              />
-            </div>
-            <div className="px-4 py-4 border-t">
-              <label>Name:</label>
-              <input
-                className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div className="px-4 py-4 border-t">
-              <label>Mobile:</label>
-              <input
-                className="bg-gray-200 rounded-full py-1 px-2 w-full border my-1"
-                type="tel"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-              />
-            </div>
+
+            <button className="bookbutton" onClick={handleBooking}>
+              Book now
+            </button>
+
+            {numberOfNights > 0 && <span>${numberOfNights * place.price}</span>}
           </div>
-
-          <button className="bookbutton" onClick={handleBooking}>
-            Book now
-          </button>
-
-          {numberOfNights > 0 && <span>${numberOfNights * place.price}</span>}
-        </div>
-
-}
+        )}
       </div>
     </div>
   );
