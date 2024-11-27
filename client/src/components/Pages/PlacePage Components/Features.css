@@ -2,6 +2,7 @@
   display: flex;
   gap: 100px;
   margin: 20px 40px;
+  margin-top: rem;
 }
 
 .offer {
@@ -19,4 +20,5 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
   justify-content: start;
+  
 }

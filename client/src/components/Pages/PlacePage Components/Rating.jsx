@@ -1,14 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 // import { useGlobal } from '../../Provider';
 import Hotel from "./Hotel";
 import Features from "./Features";
 import "./Rating.css";
+import BookingDiv from "./BookingDiv.jsx";
 
 export default function Rating({ place }) {
   // const {rate , review} = useGlobal();
+  const windowWidth = useRef(window.innerWidth);
+  const [isSmallScreen, setIsSmallScreen] = useState(windowWidth.current <= 768);
+
   return (
-    <div>
-      <div className="stars">
+    <div className="extra-rating">
+      <div className="stars review">
         <p className="guest">
           <span id="G">Guest</span>
           <br />
@@ -17,18 +21,18 @@ export default function Rating({ place }) {
         <p className="recom">
           One of the most loved Homes on <br /> Airbnb, according to guests
         </p>
-        <p id="rate">
+        <p id="rate ">
           <p className="move">{place.rate}</p>
           <br />
 
           {place.rate > 4 ? (
-            <>
+            <div className="rating-star">
               <i className="bi bi-star-fill inner"></i>
               <i className="bi bi-star-fill inner"></i>
               <i className="bi bi-star-fill inner"></i>
               <i className="bi bi-star-fill inner"></i>
               <i className="bi bi-star inner"></i>
-            </>
+            </div>
           ) : (
             <>
               <i className="bi bi-star-fill inner"></i>
@@ -69,8 +73,9 @@ export default function Rating({ place }) {
         </p>
       </div>
       <hr />
-      <Hotel />
+      <Hotel place={place} />
       <Features place={place} />
+      {/* {isSmallScreen && <BookingDiv place={place} />} */}
     </div>
   );
 }

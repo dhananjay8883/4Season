@@ -79,7 +79,7 @@ export default function SecondPage() {
           setAllPhotos={setAllPhotos}
         />
       )}
-      {windowWidth >=1090? <MainPageFooter/> :<Chart price={bookingDetails.price} date={bookingDetails.startDate} />  }
+      {windowWidth >=1090? <MainPageFooter/> :<Chart place={place} />  }
       {always && <LeftSide place={place} />}
     </div>
       

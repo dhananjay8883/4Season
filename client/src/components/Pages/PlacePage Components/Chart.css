@@ -5,4 +5,10 @@
   width: 150px;
   height: 50px;
   font-size: 15px;
+  font-size: large;
+}
+.chart-container{
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: small;
 }
