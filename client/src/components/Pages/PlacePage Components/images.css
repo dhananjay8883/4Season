@@ -69,7 +69,7 @@
 /* Media Queries */
 @media (max-width: 1200px) {
   .Container {
-    width: 700px;
+    width: 800px;
     height: 700px;
     background-color: ghostwhite;
     grid-template-columns: 350px 350px;
@@ -79,7 +79,7 @@
 
   .house {
     grid-area: 1 / 1 / 2 / 3;
-    width: 700px;
+    width: 800px;
     height: 300px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -156,19 +156,13 @@
     height: 120px;
     border-bottom-left-radius: 12px;
 
-  .slider-image {
+    .slider-image {
       width: 100%;
       height: auto;
       display: block;
     }
-    .Container{
+    .Container {
       display: inline-block;
     }
   }
 }
-
-
-
-
-
-

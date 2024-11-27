@@ -19,8 +19,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid gainsboro;
   background-color: white;
-  /* top: 50px; 
-  left: 20px;  */
   right: 10rem;
   display: flex;
   flex-direction: column;
@@ -39,7 +37,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
 }
 
 #price {
@@ -49,17 +46,49 @@
 .bookbutton {
   display: block;
   border-radius: 10px;
-  background-color: #A855F7;
+  background-color: #a855f7;
   width: 325px;
   height: 50px;
   font-size: 15px;
   margin: 20px auto 0 auto; /* Centering the button */
 }
 
-@media (max-width:768px){
-  .address{
+.sticky-chart {
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+}
+
+@media (max-width: 1300px) {
+  .address {
     font-size: large;
     font-weight: 500;
   }
+
+  .chart {
+    position: relative;
+    right: 5%;
+    top: 0%;
+  }
+
+  /* Adjust button width for smaller screens */
+  .bookbutton {
+    width: 100%; /* Make the button full width on smaller screens */
+  }
 }
 
+@media (max-width: 1200px) {
+  .chart {
+    right: 1%; /* Move chart further to the right */
+  }
+}
+
+@media (max-width: 1080px) {
+  .chart {
+    display: none; /* Increase the margin-right to push chart further */
+  }
+  .information {
+    display: flex;
+    justify-content: center;
+  }
+}

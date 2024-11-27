@@ -38,6 +38,4 @@ export const icons = [
   },
 
   { key: 8, img: "/villa_images/icons/hottub.png", view: "Private hot tub" },
-
-  { key: 9, img: "/villa_images/icons/wifi.png", view: "wifi" },
 ];

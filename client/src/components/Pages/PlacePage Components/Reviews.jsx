@@ -26,7 +26,11 @@ export default function Reviews({ place }) {
                 {item.label} <br />
                 {item.score}
               </p>
-              <img className="icon" src={`/villa_images/icons/${item.icon}`} alt={item.label} />
+              <img
+                className="icon"
+                src={`/villa_images/icons/${item.icon}`}
+                alt={item.label}
+              />
             </div>
             {index < 5 && <div className="vline"></div>}
           </div>
